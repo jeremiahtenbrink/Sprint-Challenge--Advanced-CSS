@@ -204,16 +204,62 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
+.home img {
+  width: 100%;
+}
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+.home .space-images .sky {
+  box-shadow: -1px 3px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.home .space-images .sky:hover {
+  transform: scale(1.4);
+}
+.home .space-images .sky:active {
+  transform: none;
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+}
+.home .space-images .launch {
+  box-shadow: -1px 3px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.home .space-images .launch:hover {
+  transform: scale(1.4);
+}
+.home .space-images .launch:active {
+  transform: none;
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images .launch {
+    display: none;
+  }
+}
+.home .space-images .blast {
+  box-shadow: -1px 3px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.home .space-images .blast:hover {
+  transform: scale(1.4);
+}
+.home .space-images .blast:active {
+  transform: none;
 }
 .home .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images img {
+    width: 94%;
+    margin: 1.2rem auto;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -231,6 +277,13 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 500px) {
+  .home .walk {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
 }
@@ -247,14 +300,53 @@ footer {
   background-color: #22283A;
   border-radius: 5px;
   padding: 0.9rem 1.8rem;
+  box-shadow: -1px 3px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #515f8a;
+  color: #22283A;
+}
+.home .walk .walk-text .btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0px 1px 2px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    max-width: 100%;
+    width: 94%;
+    margin: 0 auto;
+    padding: 2.1rem 2rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 94%;
+    margin: 0 auto;
+  }
 }
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
 .home .walk .walk-img img {
-  width: 100%;
+  width: 94%;
   height: auto;
   border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  box-shadow: -1px 3px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.home .walk .walk-img img:hover {
+  transform: scale(1.4);
+}
+.home .walk .walk-img img:active {
+  transform: none;
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-img {
+    order: -1;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
