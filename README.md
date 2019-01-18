@@ -34,13 +34,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive website will change its width at given viewport sizes to a fixed width. So the website appears to be 
+resizing itself at given viewport widths. A responsive layout is where the container adjusts as the viewport adjusts. 
+The size of the container can be any number of px based on the viewport size. It reduces its container size as the viewport
+shrinks. 
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first is designing the mobile site first then setting break points where the viewport width is greater 
+than max width to adjust for larger screens. Desktop first is designing the site for desktops then adjusting the 
+design at max width viewport sizes for smaller screens. 
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+It adjusts the default font size of the browser to be 10px so that 1 rem is equal to 10px. 
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is a process in which you use a higher level language that it easier for us to understand and compiling
+it to css before uploading the css to the site. Generally speaking one would use less or sass or scss to 
+write up their style sheet and then have the compiler compile their stylesheet to css. It makes for faster, easier 
+to understand and more efficient code. 
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Nesting would be my favorite concept I think. Its the one I use the most and makes writing the style sheet easier 
+than the other concepts. I think the concept that gives me the most trouble is writing my own functions. Its easy 
+to use the built in functions like scale(), lighten(), darken() ect... But as for writing my own function for a 
+meaningful purpose is still out of my comfort zone. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
