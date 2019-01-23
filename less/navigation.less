@@ -1,1 +1,30 @@
 // Navigation code here
+.navigation{
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+  align-items: center;
+  margin: 1.5rem;
+  background-color: @nav-bg;
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__nav {
+    .container;
+  }
+
+  &__list {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: @header-font-color;
+    font-weight: bold;
+    font-size: 1.6rem;
+    max-width: 374px;
+    padding-top: 2rem;
+    align-items: center;
+
+  }
+}

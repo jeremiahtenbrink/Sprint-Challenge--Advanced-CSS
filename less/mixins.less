@@ -1,1 +1,86 @@
 // Mixins Here
+.button (@backgroundColor, @borderRadius) {
+  max-width: max-content;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: @backgroundColor;
+  border-radius: 5px;
+  padding: .9rem 1.8rem;
+
+  .hoverGlow();
+  .buttonPress();
+  .boxShadowDark();
+
+  @media @phone {
+    max-width: 100%;
+    width: 94%;
+    margin: 0 auto;
+    padding: 2.1rem 2rem;
+    text-align: center;
+  }
+
+}
+
+.buttonScaleOutOnHover (@color: @button-bg) {
+
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 90%;
+    width: 90%;
+    border-radius: @borderRadius;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: all .7s;
+    background-color: @color;
+    transform: translateX(-50%) translateY(-50%);
+
+  }
+
+  &:hover::after {
+    transform: translateX(-50%) translateY(-50%) scaleX(2) scaleY(2);
+    opacity: 0;
+  }
+}
+
+@borderRadius: 18px;
+
+.hoverGlow(@color: @btn-bg-color, @lightenNumber: 25%, @textColor: @btn-bg-color){
+  &:hover{
+    background-color: lighten(@color, @lightenNumber);
+    color: @textColor;
+  }
+
+
+}
+
+.hoverGrow(@size: 1.4){
+  &:hover {
+    transform: scale(@size);
+  }
+  &:active {
+    transform: none;
+  }
+}
+
+.buttonPress(@opacity: @bsDefaultOpacity, @blend: (@bsDefaultBlend - 1px), @x: 0, @y: (@bsDefaultY - 3px), @size: @bsDefaultSize){
+
+  &:active {
+    transform: translateY(3px);
+    .boxShadowDark(@opacity, @blend, @x, @y, @size);
+  }
+}
+
+.boxShadowDark(@opacity: @bsDefaultOpacity, @blend: @bsDefaultBlend, @x: @bsDefaultX, @y: @bsDefaultY, @size: @bsDefaultSize) {
+  box-shadow: @x @y @size @blend rgba(0, 0, 0, @opacity);
+
+}
+
+@bsDefaultOpacity: .4;
+@bsDefaultBlend: 3px;
+@bsDefaultX: -1px;
+@bsDefaultY: 3px;
+@bsDefaultSize: 1px;
